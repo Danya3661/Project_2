@@ -1,0 +1,386 @@
+.footer {
+  background-color: $title-color;
+  color: $white-color;
+  
+  @include bp($point_2, min) {
+    padding: 10rem 0 0;
+  }
+  
+  @include bp($point_3) {
+    padding: 6rem 0 0;
+  }
+  
+  
+  .footer__in {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    .footer__row_top {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      .footer__in_row {
+        &.footer__in_row.footer__in_row--one {
+          width: 100%;
+          display: flex;
+
+          @include bp($point_2, min) {
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+          }
+
+          @include bp($point_3) {
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 2rem;
+          }
+
+          .footer__call {
+            &.footer__call.footer__call--one {
+              @include bp($point_2, min) {
+                width: 13rem;
+              }
+
+              @include bp($point_3) {
+                order: 1;
+              }
+
+              .eat {
+                font-size: 2.2rem;
+                line-height: 3.3rem;
+              }
+            }
+            &.footer__call.footer__call--two {
+              @include bp($point_2, min) {
+                width: 37.8rem;
+              }
+
+              @include bp($point_3) {
+                width: 100%;
+              }
+
+              .footer__logo_w {
+                display: block;
+                object-fit: contain;
+                margin-bottom: 1.2rem;
+
+                @include bp($point_2, min) {
+                  width: 37.8rem;
+                  height: 18.8rem;
+                }
+
+                @include bp($point_3) {
+                  width: 100%;
+                  height: 100%;
+                }
+
+                .footer__logo {
+                  @extend %contain_image;
+                }
+              }
+              .footer__logo_descr {
+                width: 31.2rem;
+                text-align: center;
+                line-height: 3rem;
+                color: $white-color;
+                margin: 0 auto;
+
+                @include bp($point_3) {
+                  margin-bottom: 1rem;
+                }
+              }
+            }
+            &.footer__call.footer__call--three {
+              @include bp($point_2, min) {
+                width: 18rem;
+              }
+
+              @include bp($point_3) {
+                width: 100%;
+              }
+
+              .socials__sprite {
+                display: flex;
+
+                @include bp($point_2, min) {
+                  justify-content: center;
+                  flex-direction: column;
+                  column-gap: 1rem;
+                  width: 18rem;
+                }
+
+                @include bp($point_3) {
+                  column-gap: 2rem;
+                  justify-content: center;
+                  align-items: center;
+                  margin-bottom: 1rem;
+                }
+
+                .social__link {
+                  width: 2.4rem;
+                  height: 2.3rem;
+                  object-fit: contain;
+                  display: block;
+                  color: $white-color;
+                  transition: all 0.5s ease-in-out;
+                  &.social__link.social__link--inst {
+                    @include bp($point_2, min) {
+                      margin-left: 1rem;
+                    }
+                  }
+                  &.social__link.social__link--facebook {
+                    @include bp($point_2, min) {
+                      margin-left: 5.4rem;
+                    }
+                  }
+                  &.social__link.social__link--twitter {
+                    @include bp($point_2, min) {
+                      margin-left: auto;
+                    }
+                  }
+                  &.social__link.social__link--pintarest {
+                    @include bp($point_2, min) {
+                      margin-left: 9.8rem;
+                    }
+                  }
+                  &:hover {
+                    color: $gold-color;
+                    transform: scale(1.2, 1.2);
+                  }
+                  .icon {
+                    @extend %contain_image;
+                  }
+                }
+              }
+            }
+          }
+        }
+        &.footer__in_row.footer__in_row--two {
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding-bottom: 2.4rem;
+          border-bottom: 1px solid #575b62;
+
+          @include bp($point_2, min) {
+            align-items: center;
+            justify-content: space-between;
+          }
+
+          @include bp($point_3) {
+            flex-direction: column;
+            align-items: center;
+          }
+
+          .footer__call {
+            &.footer__call.footer__call--one {
+              display: flex;
+
+              flex-direction: column;
+              @include bp($point_2, min) {
+                width: 22.8rem;
+              }
+
+              @include bp($point_3) {
+                width: 100%;
+                align-items: center;
+                margin-bottom: 2rem;
+              }
+
+              .contact__subtitle {
+                font-size: 1.5rem;
+                line-height: 2rem;
+                letter-spacing: 3px;
+                color: $white-color;
+                border-bottom: 1px solid $gold-color;
+                border-top: 1px solid $gold-color;
+                text-transform: uppercase;
+                width: 9.4rem;
+
+                padding-top: 0.4rem;
+
+                @include bp($point_2, min) {
+                  margin-bottom: 3.4rem;
+                }
+
+                @include bp($point_3) {
+                  margin-bottom: 1.5rem;
+                }
+              }
+              .contact__descr {
+                color: $white-color;
+                line-height: 30px;
+                text-decoration: none;
+                &.contact__descr.contact__descr--gold {
+                  color: $gold-color;
+                }
+              }
+            }
+            &.footer__call.footer__call--two {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              flex-direction: column;
+              @include bp($point_2, min) {
+                width: 66.4rem;
+              }
+
+              @include bp($point_3) {
+                width: 100%;
+                margin-bottom: 3rem;
+              }
+
+              .footer__form {
+                width: 100%;
+                display: flex;
+
+                @include bp($point_2, min) {
+                  align-items: center;
+                  justify-content: center;
+                }
+
+                @include bp($point_3) {
+                  flex-direction: column;
+                  align-items: center;
+                  row-gap: 3rem;
+                }
+
+                .footer__input {
+                  height: 6.8rem;
+                  background-color: transparent;
+                  border: 1px solid #858585;
+                  font-size: 2.2rem;
+                  line-height: 3.3rem;
+                  padding-left: 2.4rem;
+                  color: $white-color;
+
+                  @include bp($point_2, min) {
+                    width: 45.6rem;
+                  }
+
+                  @include bp($point_3) {
+                    width: 100%;
+                  }
+                }
+                input::placeholder {
+                  color: $white-color;
+                }
+                .footer__btn {
+                  @extend%btn_size_7;
+                  @extend%btn_color_1;
+                  @extend%btn_font_size;
+                }
+              }
+            }
+            &.footer__call.footer__call--three {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              row-gap: 0.6rem;
+              color: $white-color;
+
+              @include bp($point_2, min) {
+                width: 26.4rem;
+                align-items: end;
+                text-align: right;
+              }
+
+              @include bp($point_3) {
+                align-items: center;
+                text-align: center;
+              }
+
+              .hours__subtitle {
+                font-size: 1.6rem;
+                line-height: 2.2rem;
+                letter-spacing: 3px;
+                border-bottom: 1px solid $gold-color;
+                border-top: 1px solid $gold-color;
+                text-transform: uppercase;
+                padding-top: 0.6rem;
+
+                @include bp($point_2, min) {
+                  margin-bottom: 4rem;
+                }
+
+                @include bp($point_3) {
+                  margin-bottom: 1rem;
+                }
+              }
+              .hours__descr {
+                line-height: 3rem;
+                span {
+                  color: $gold-color;
+                  padding-right: 1rem;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .footer__row_bottom {
+      width: 100%;
+      display: flex;
+
+      @include bp($point_2, min) {
+        align-items: center;
+        justify-content: space-between;
+        padding: 2.6rem 0;
+      }
+
+      @include bp($point_3) {
+        flex-direction: column;
+        align-items: center;
+        
+        padding: 1.3rem 0;
+      }
+
+      .last__descr {
+        color: $white-color;
+
+        @include bp($point_2, min) {
+          line-height: 3rem;
+        }
+
+        @include bp($point_3) {
+          font-size: 1.5rem;
+          line-height: 2.5em;
+          text-align: center;
+        }
+
+        span {
+          color: $gold-color;
+          padding-left: 1rem;
+        }
+      }
+      .last__footer_list {
+        display: flex;
+        align-items: center;
+        column-gap: 2rem;
+        .last__footer_item {
+          .last__footer_link {
+
+            color: $gold-color;
+            text-decoration: none;
+            
+            @include bp($point_2, min) {
+              line-height: 3rem;
+            }
+            
+            @include bp($point_3) {
+            font-size: 1.5rem;
+            line-height: 2.5em;
+            }
+            
+            
+          }
+        }
+      }
+    }
+  }
+}

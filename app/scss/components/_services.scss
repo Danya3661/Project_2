@@ -1,0 +1,129 @@
+.services {
+  background-color: $title-color;
+  padding: 12rem 0;
+  
+  @include bp($point_2, min) {
+    padding: 12rem 0;
+  }
+  
+  @include bp($point_3) {
+    padding: 6rem 0;
+  }
+  
+  
+  .services__in {
+    display: flex;
+
+    @include bp($point_2, min) {
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    @include bp($point_3) {
+      flex-direction: column;
+      row-gap: 4rem;
+      align-items: center;
+    }
+
+    .services__coll {
+      &.services__coll.services__coll--one {
+        width: 43.8rem;
+        color: $white-color;
+        display: flex;
+        flex-direction: column;
+        row-gap: 1rem;
+
+        @include bp($point_3) {
+          text-align: center;
+          align-items: center;
+          width: 100%;
+        }
+
+        .services__subtitle {
+          font-size: 1.5rem;
+          line-height: 2.2rem;
+          letter-spacing: 3px;
+          border-bottom: 1px solid $gold-color;
+          border-top: 1px solid $gold-color;
+          padding-top: 0.4rem;
+          width: 17.2rem;
+          text-transform: uppercase;
+        }
+        .services__title {
+          font-size: 4rem;
+          line-height: 5.6rem;
+        }
+        .services__descr {
+          line-height: 3rem;
+        }
+      }
+      &.services__coll.services__coll--two {
+        @include bp($point_2, min) {
+          width: 85.2rem;
+        }
+
+        @include bp($point_3) {
+          width: 100%;
+        }
+
+        .services__item_w {
+          width: 100%;
+          display: flex;
+
+          @include bp($point_2, min) {
+            align-items: center;
+            justify-content: space-between;
+          }
+          
+          @include bp($point_3) {
+          flex-direction: column;
+          align-items: center;
+          row-gap: 3rem ;
+          }
+          
+
+          .services__item {
+            // box-sizing: content-box;
+
+            border: 2rem solid #323841;
+            padding: 4rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            row-gap: 1.5rem;
+            transition: all 0.5s ease-in-out;
+            cursor: pointer;
+            
+            @include bp($point_2, min) {
+                min-width: 25.4rem;
+            }
+            
+            @include bp($point_3) {
+            width: 100%;
+            }
+            
+            &:hover {
+              transform: rotate(360deg);
+              border-radius: 50%;
+            }
+            .services__img_w {
+              width: 6rem;
+              height: 6rem;
+              display: block;
+              object-fit: contain;
+              .services__img {
+                @extend %contain_image;
+              }
+            }
+            .services__item_title {
+              font-size: 2.5rem;
+              line-height: 3.5rem;
+              color: $white-color;
+            }
+          }
+        }
+      }
+    }
+  }
+}

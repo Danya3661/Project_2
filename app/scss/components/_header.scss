@@ -1,0 +1,211 @@
+.burger__menu {
+  @include bp($point_2, min) {
+    display: none;
+  }
+
+  @include bp($point_3) {
+    background-image: url(../images/bgmenu.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 5rem;
+    height: 5rem;
+    z-index: 999;
+    position: absolute;
+    top: 0.6rem;
+    right: 1rem;
+  }
+}
+
+.header {
+  width: 100%;
+  min-height: 37rem;
+  background-color: $title-color;
+  padding: 5rem 0 0;
+
+  @include bp($point_3) {
+    padding: 6rem 0 0;
+  }
+
+  .header__in {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    .header_top {
+      width: 100%;
+      display: flex;
+      border-bottom: 1px solid $border-color;
+
+      @include bp($point_2, min) {
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: 5rem;
+      }
+
+      @include bp($point_3) {
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 3rem;
+        row-gap: 3rem;
+      }
+
+      .header__btn {
+        @extend%btn_font_size;
+        line-height: 7.3rem;
+        &.header__btn.header__btn--one {
+          @extend%btn_color_3;
+          @extend%btn_size_1;
+        }
+        &.header__btn.header__btn--two {
+          @extend%btn_color_2;
+          @extend%btn_size_2;
+        }
+      }
+      .header__logo_w {
+        display: block;
+        object-fit: contain;
+        width: 37.8rem;
+
+        @include bp($point_2, min) {
+          height: 18.8rem;
+          left: 49.6rem;
+        }
+
+        @include bp($point_3) {
+          width: 100%;
+          height: 100%;
+        }
+
+        .logo__svg {
+          @extend %contain_image;
+          .logo__path_w {
+            .anim {
+              animation: 10s pulsing infinite;
+              transition: all 0.5s ease-in-out;
+            }
+
+            @keyframes pulsing {
+              0% {
+                fill: $gold-color;
+              }
+              25% {
+                fill: #7fff00;
+              }
+              50% {
+                fill: #dc143c;
+              }
+              75% {
+                fill: #00ffff;
+              }
+              100% {
+                fill: #808000;
+              }
+            }
+          }
+        }
+      }
+    }
+    .header_menu {
+      display: flex;
+      width: 100%;
+      padding: 2.6rem 0;
+
+      @include bp($point_2, min) {
+        justify-content: center;
+      }
+
+      @include bp($point_3) {
+        flex-direction: column;
+      }
+      .hm {
+        @include bp($point_3) {
+          display: none;
+          position: fixed;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          z-index: 998;
+          top: 0;
+          left: 0;
+          width: 100dvw;
+          height: 100dvh;
+          background-color: #fff;
+          transform: translateX(-100%);
+          opacity: 0;
+          visibility: hidden;
+          pointer-events: none;
+          transition: all 0.3s ease-in-out;
+          overflow: auto;
+        }
+        &.hm.active{
+          @include bp($point_3){
+            transform: translateX(0);
+            visibility: visible;
+            pointer-events: auto;
+            opacity: 1;
+          }
+        }
+        .menu__list {
+          @include bp($point_2, min) {
+            display: flex;
+            align-items: center;
+            column-gap: 6rem;
+          }
+          @include bp($point_3){
+            flex-direction: column;
+            row-gap: 2rem;
+          }
+  
+         
+  
+          
+  
+          .menu__item {
+            .menu__link {
+              line-height: 3rem;
+              color: $white-color;
+              text-decoration: none;
+              transition: color 0.5s ease-in-out;
+              &:hover {
+                color: $gold-color;
+              }
+            }
+          }
+        }
+      }
+      
+      .menu__socials {
+        @include bp($point_2, min) {
+          margin-left: auto;
+        }
+
+        @include bp($point_3) {
+          margin: 0 auto;
+        }
+
+        .socials__sprite {
+          display: flex;
+          align-items: center;
+          column-gap: 2rem;
+          .social__link {
+            width: 2.4rem;
+            height: 2.3rem;
+            object-fit: contain;
+            display: block;
+            color: $white-color;
+            transition: all 0.5s ease-in-out;
+            &:hover {
+              color: $gold-color;
+              transform: scale(1.2, 1.2);
+            }
+            .icon {
+              @extend %contain_image;
+            }
+          }
+        }
+      }
+    }
+  }
+}

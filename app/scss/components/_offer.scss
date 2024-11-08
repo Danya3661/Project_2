@@ -1,0 +1,203 @@
+.offer__in {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  .offer__coll {
+    &.offer__coll.offer__coll--one {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      row-gap: 1rem;
+      text-align: center;
+      margin-bottom: 4rem;
+      .offer__subtitle {
+        font-size: 1.5rem;
+        line-height: 2.2rem;
+        letter-spacing: 3px;
+        color: $title-color;
+        border-bottom: 1px solid $gold-color;
+        border-top: 1px solid $gold-color;
+        padding-top: 0.5rem;
+        text-transform: uppercase;
+      }
+      .offer__title {
+        font-size: 4rem;
+        line-height: 5.6rem;
+        color: $title-color;
+      }
+      .offer__descr {
+        line-height: 3rem;
+        color: $text-color;
+        max-width: 81.3rem;
+      }
+    }
+    &.offer__coll.offer__coll--two {
+      display: flex;
+
+      @include bp($point_2, min) {
+        align-items: center;
+        justify-content: center;
+        column-gap: 3rem;
+      }
+
+      @include bp($point_3) {
+        flex-direction: column;
+        align-items: center;
+        row-gap: 3rem;
+      }
+
+      .offer__item {
+        display: flex;
+        padding: 4rem;
+        position: relative;
+
+        @include bp($point_2, min) {
+          align-items: center;
+          justify-content: space-between;
+        }
+
+        @include bp($point_3) {
+          flex-direction: column;
+          align-items: center;
+          row-gap: 3rem;
+          text-align: center;
+        }
+
+        &:hover {
+          .burger__img_w,
+          .pizza__img_w {
+            transform: scale(1.2, 1.2);
+          }
+        }
+        .oblako__img_w {
+          display: block;
+          object-fit: contain;
+          width: 15rem;
+          height: 9.4rem;
+          margin-bottom: 4.2rem;
+
+          .oblako__img {
+            @extend %contain_image;
+          }
+        }
+        .offer__price_w {
+          position: absolute;
+          display: flex;
+          flex-direction: column;
+          text-align: center;
+          //   row-gap: 0.5rem ;
+          color: $title-color;
+
+          @include bp($point_2, min) {
+            top: 3.7rem;
+            left: 6.7rem;
+          }
+
+          @include bp($point_3) {
+            top: 3.9rem;
+            left: 23.7rem;
+          }
+
+          .only {
+            font-size: 1.5rem;
+            line-height: 1rem;
+            text-transform: uppercase;
+          }
+          .offer__price {
+            font-size: 6rem;
+            line-height: 6.6rem;
+          }
+        }
+        .offer__item_subtitle {
+          font-size: 1.5rem;
+          line-height: 2.2rem;
+          letter-spacing: 4.5px;
+          border-bottom: 1px solid $title-color;
+          border-top: 1px solid $title-color;
+          padding-top: 0.5rem;
+          margin-bottom: 0.8rem;
+          color: $title-color;
+          text-transform: uppercase;
+        }
+        .offer__item_title {
+          font-size: 4rem;
+          line-height: 5.6rem;
+          color: $title-color;
+          margin-bottom: 0.5rem;
+        }
+        .offer__item_descr {
+          line-height: 3rem;
+          color: $text-color;
+          max-width: 24.5rem;
+        }
+        &.offer__item_coll.offer__item_coll--two {
+          .burger__img_w {
+            width: 30.7rem;
+            height: 23.2rem;
+            object-fit: contain;
+            display: block;
+
+            .burger__img {
+              @extend %contain_image;
+            }
+          }
+          .pizza__img_w {
+            width: 32.5rem;
+            height: 27.4rem;
+            object-fit: contain;
+            display: block;
+
+            .pizza__img {
+              @extend %contain_image;
+            }
+          }
+        }
+
+        &.offer__item.offer__item--back_1 {
+          width: 66.5rem;
+          background-image: url(../images/offer_back_1.jpg);
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+        &.offer__item.offer__item--back_2 {
+          width: 66.5rem;
+          background-image: url(../images/offer_back_2.jpg);
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          .offer__price_w {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            //   row-gap: 0.5rem ;
+            color: $white-color;
+
+            @include bp($point_2, min) {
+              top: 5.4rem;
+              left: 7.7rem;
+            }
+
+            @include bp($point_3) {
+              top: 4.4rem;
+              left: 25.7rem;
+            }
+
+            .only {
+              font-size: 1.5rem;
+              line-height: 1rem;
+              text-transform: uppercase;
+            }
+            .offer__price {
+              font-size: 6rem;
+              line-height: 6.6rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

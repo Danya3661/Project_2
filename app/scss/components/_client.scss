@@ -1,0 +1,127 @@
+.client {
+  background-color: $title-color;
+  .client__in {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    .client__row {
+      &.client__row.client__row--one {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        row-gap: 1rem;
+        color: $white-color;
+        text-align: center;
+        
+        @include bp($point_2, min) {
+            margin-bottom: 8rem;
+        }
+        
+        @include bp($point_3) {
+            margin-bottom: 4rem;
+        }
+        
+        
+        .client__subtitle {
+          font-size: 1.5rem;
+          line-height: 2.2rem;
+          letter-spacing: 0.3rem;
+
+          border-top: 1px solid $gold-color;
+          border-bottom: 1px solid $gold-color;
+          padding-top: 0.5rem ;
+          text-transform: uppercase;
+        }
+        .client__title {
+          font-size: 4rem;
+          line-height: 5.6rem;
+        }
+        .client__descr {
+          line-height: 3rem;
+        }
+      }
+      &.client__row.client__row--two {
+        width: 100%;
+        display: flex;
+        .client_slider {
+          max-width: 54.4rem;
+          .client_slider__w {
+            max-width: 54.4rem;
+            display: flex;
+
+            .client_slider__item {
+              display: flex;
+              flex-direction: column;
+              width: 54.4rem;
+              padding: 2rem 4rem;
+              background-color: #343942;
+              
+              .slider__item_row {
+                display: flex;
+                align-items: center;
+                &.slider__item_row.slider__item_row__one {
+                  column-gap: 2rem;
+                  border-bottom: 1px solid #797e89;
+                  padding-bottom: 3rem;
+                  margin-bottom: 3rem;
+                  .slider__img_w {
+                    display: block;
+                    object-fit: contain;
+                    width: 11rem;
+                    height: 11rem;
+                    &::before {
+                      position: absolute;
+                      content: "";
+                      background-image: url(../images/client_note.svg);
+                      width: 3rem;
+                      height: 3rem;
+                    }
+                    .slider__img {
+                      @extend %contain_image;
+                    }
+                  }
+                  .slider__item_info {
+                    display: flex;
+                    flex-direction: column;
+
+                    .slider__item_title {
+                      
+                      color: $white-color;
+                      
+                      @include bp($point_2, min) {
+                        font-size: 3rem;
+                        line-height: 4.2rem;
+                      }
+                      
+                      @include bp($point_3) {
+                        font-size: 2.5rem;
+                        line-height: 3.8rem;
+                      }
+                      
+                      
+                    }
+                    .slider__item_subtitle {
+                      line-height: 3rem;
+                      color: $gold-color;
+                    }
+                  }
+                }
+                &.slider__item_row.slider__item_row__two {
+                  .slider__item_descr {
+                    font-size: 2.4rem;
+                    line-height: 3.7rem;
+                    color: $white-color;
+                    margin-bottom: 3rem;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

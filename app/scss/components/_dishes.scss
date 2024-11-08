@@ -1,0 +1,260 @@
+.dishes {
+  .dishes__in {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    .main__dishes_title {
+      font-size: 1.5rem;
+      line-height: 2.2rem;
+      letter-spacing: 3px;
+      border-bottom: 1px solid $gold-color;
+      border-top: 1px solid $gold-color;
+      width: 6rem;
+      padding-top: 5px;
+      margin-bottom: 1.2rem;
+      text-transform: uppercase;
+
+      @include bp($point_3) {
+        margin: 0 auto;
+      }
+    }
+    .dishes__coll_w {
+      display: flex;
+      width: 100%;
+
+      @include bp($point_3) {
+        flex-direction: column;
+        row-gap: 2rem;
+      }
+
+      .dishes__coll {
+        &.dishes__coll.dishes__coll--one {
+          @include bp($point_2, min) {
+            width: 49.1rem;
+          }
+
+          @include bp($point_3) {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+          }
+
+          .dishes__title {
+            font-size: 4rem;
+            line-height: 5.6rem;
+            color: $title-color;
+            margin-bottom: 1.3rem;
+          }
+          .dishes__descr {
+            line-height: 3rem;
+            color: $text-color;
+
+            @include bp($point_2, min) {
+              margin-bottom: 4.5rem;
+            }
+
+            @include bp($point_3) {
+              margin-bottom: 2.5rem;
+            }
+          }
+          .dishes__img_w {
+            display: block;
+            object-fit: contain;
+
+            @include bp($point_2, min) {
+              width: 39.8rem;
+              height: 54.8rem;
+              margin-bottom: 6rem;
+            }
+
+            @include bp($point_3) {
+              width: 100%;
+              height: 100%;
+              margin-bottom: 3rem;
+            }
+
+            .dishes__img {
+              @extend %contain_image;
+            }
+          }
+          .dishes__btn {
+            @extend%btn_size_4;
+            @extend%btn_color_3;
+            @extend%btn_font_size;
+            color: $gold-color;
+            &:hover {
+              background-color: $title-color;
+              color: $white-color;
+            }
+          }
+        }
+        &.dishes__coll.dishes__coll--two {
+          padding: 1.5rem 0 0 0;
+
+          display: flex;
+          flex-direction: column;
+
+          @include bp($point_2, min) {
+            width: 81.8rem;
+            margin-left: auto;
+            
+          }
+
+          @include bp($point_3) {
+            width: 100%;
+            margin: 0 auto;
+            align-items: center;
+          }
+
+          .start__title,
+          .main__dish_title,
+          .desrt__dish_title {
+            font-size: 3.6rem;
+            line-height: 5rem;
+            margin-bottom: 4rem;
+          }
+          .start__menu,
+          .main__dish_menu,
+          .desert__dish_menu {
+            display: flex;
+            flex-direction: column;
+            row-gap: 5rem;
+            
+            @include bp($point_2, min) {
+              margin-bottom: 7.5rem;
+            }
+            
+            @include bp($point_3) {
+              margin-bottom: 3.5rem;
+            }
+            
+            
+
+            .menu__item {
+              width: 100%;
+              display: flex;
+              align-items: center;
+              column-gap: 1rem;
+              .menu__item_img_w {
+                display: block;
+                object-fit: contain;
+                width: 8.4rem;
+                height: 8.4rem;
+
+                @include bp($point_2, min) {
+                  width: 8.4rem;
+                  height: 8.4rem;
+                }
+
+                @include bp($point_3) {
+                  width: 6.2rem;
+                  height: 6.2rem;
+                }
+
+                .menu__item_img {
+                  @extend %contain_image;
+                }
+              }
+              .menu__item_info {
+                display: flex;
+                flex-direction: column;
+                row-gap: 1px;
+                .menu__item_title {
+                  color: $title-color;
+
+                  @include bp($point_2, min) {
+                    font-size: 3rem;
+                    line-height: 4.2rem;
+                  }
+
+                  @include bp($point_3) {
+                    font-size: 1.5rem;
+                    line-height: 2.1rem;
+                  }
+                }
+                .menu__item_wrapp {
+                  display: flex;
+                  align-items: center;
+                  .menu__item_descr {
+                    color: $text-color;
+
+                    @include bp($point_2, min) {
+                      line-height: 3rem;
+                    }
+
+                    @include bp($point_3) {
+                      line-height: 2.5rem;
+                      font-size: 1.5rem;
+                    }
+                  }
+                }
+              }
+              .border {
+                @include bp($point_2, min) {
+                  border-bottom: 2px solid #aaaaaa;
+                  margin-top: 5rem;
+                  &.border.border--one {
+                    width: 25.9rem;
+                  }
+                  &.border.border--two {
+                    width: 27.2rem;
+                  }
+                  &.border.border--three {
+                    width: 27.7rem;
+                  }
+                  &.border.border--four {
+                    width: 31.7rem;
+                  }
+                  &.border.border--five {
+                    width: 26.3rem;
+                  }
+                  &.border.border--six {
+                    width: 32rem;
+                  }
+                  &.border.border--seven {
+                    width: 27.3rem;
+                  }
+                  &.border.border--eight {
+                    width: 23.7rem;
+                  }
+                  &.border.border--nine {
+                    width: 29rem;
+                  }
+                  &.border.border--ten {
+                    width: 33rem;
+                  }
+                }
+
+                @include bp($point_3) {
+                  display: none;
+                }
+              }
+              .menu__item_price {
+                
+                color: $title-color;
+                
+                @include bp($point_2, min) {
+                  font-size: 3rem;
+                  line-height: 4.2rem;
+                }
+                
+                @include bp($point_3) {
+                  font-size: 2rem;
+                  line-height: 3.2rem;
+                  margin-left: auto;
+                }
+                
+                
+              }
+            }
+          }
+          .desert__dish_menu{
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}

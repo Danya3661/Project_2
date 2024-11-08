@@ -1,0 +1,151 @@
+.popular{
+  padding-top: 0;
+}
+.popular__in {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  .popular__coll {
+    &.popular__coll.popular__coll--one {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      row-gap: 1rem;
+      margin-bottom: 5rem;
+
+      @include bp($point_2, min) {
+        width: 76rem;
+      }
+
+      @include bp($point_3) {
+        width: 100%;
+      }
+
+      .popular__subtitle {
+        font-size: 1.5rem;
+        line-height: 2.2rem;
+        letter-spacing: 3px;
+        color: $title-color;
+        border-bottom: 1px solid $gold-color;
+        border-top: 1px solid $gold-color;
+        text-transform: uppercase;
+        padding-top: 0.4rem;
+      }
+      .popular__title {
+        font-size: 4rem;
+        line-height: 5.6rem;
+        color: $title-color;
+      }
+      .popular__descr {
+        line-height: 3rem;
+        color: $text-color;
+      }
+    }
+    &.popular__coll.popular__coll--two {
+      width: 100%;
+
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      row-gap: 3rem;
+      
+      @include bp($point_2, min) {
+        margin-bottom: 6.5rem;
+      }
+      
+      @include bp($point_3) {
+        margin-bottom: 3.5rem;
+      }
+      
+      
+
+      .popular_list {
+        display: flex;
+
+        @include bp($point_2, min) {
+          align-items: center;
+          justify-content: center;
+          margin-right: -3rem;
+        }
+
+        @include bp($point_3) {
+          flex-direction: column;
+          align-items: center;
+          row-gap: 4rem;
+        }
+
+        .popular__item {
+          display: flex;
+          flex-direction: column;
+
+          @include bp($point_2, min) {
+            width: calc(100% / 4);
+            padding-right: 3rem;
+          }
+
+          @include bp($point_3) {
+            width: 100%;
+          }
+
+          .popular__img_w {
+            object-fit: contain;
+            display: block;
+
+            @include bp($point_2, min) {
+              width: 31.8rem;
+              height: 30.7rem;
+            }
+            
+            @include bp($point_3) {
+            width: 100%;
+            height: 100%;
+            }
+            
+
+            .popular__img {
+              @extend %contain_image;
+            }
+          }
+          .popular__price_w {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem 0;
+            color: $title-color;
+            font-size: 3rem;
+            font-weight: 400;
+            line-height: 4.2rem;
+            // transition: all 0.3s ease-in-out;
+            border-bottom: 1px solid #dcdcdc;
+            cursor: pointer;
+            margin-bottom: 1.3rem;
+            pad &:hover {
+              font-weight: 700;
+            }
+          }
+          .popular__descr {
+            line-height: 3rem;
+            color: $text-color;
+          }
+        }
+      }
+    }
+  }
+  .popular__btn {
+    @extend%btn_size_4;
+    @extend%btn_color_3;
+    @extend%btn_font_size;
+    color: $gold-color;
+    &:hover {
+      background-color: $title-color;
+      color: $white-color;
+      border-radius: 3rem;
+      transform: scale(1.2, 1.2);
+      border: 2px solid $white-color;
+    }
+  }
+}

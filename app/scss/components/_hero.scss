@@ -1,0 +1,231 @@
+.hero {
+  background-color: $title-color;
+  padding: 3rem;
+  .hero__in {
+    display: flex;
+
+    @include bp($point_2, min) {
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    @include bp($point_3) {
+      flex-direction: column;
+      row-gap: 6rem;
+      align-items: center;
+    }
+
+    .hero__coll {
+      &.hero__coll.hero__coll--one {
+        @include bp($point_2, min) {
+          width: 61.6rem;
+        }
+
+        @include bp($point_3) {
+          width: 100%;
+        }
+
+        .hero__info {
+          display: flex;
+          flex-direction: column;
+
+          @include bp($point_3) {
+            width: 100%;
+            text-align: center;
+            align-items: center;
+          }
+
+          .hero__title {
+            color: $white-color;
+            margin-bottom: 2.6rem;
+
+            @include bp($point_2, min) {
+              font-size: 10rem;
+              line-height: 11rem;
+            }
+
+            @include bp($point_3) {
+              font-size: 5rem;
+              line-height: 6rem;
+            }
+          }
+          .hero__descr {
+            line-height: 3rem;
+            color: $white-color;
+            margin-bottom: 3.5rem;
+          }
+          .hero__btn {
+            @extend %btn_size_3;
+            @extend %btn_color_4;
+            @extend %btn_font_size;
+          }
+        }
+      }
+      &.hero__coll.hero__coll--two {
+        @include bp($point_2, min) {
+          width: 62.5rem;
+        }
+
+        @include bp($point_3) {
+          width: 100%;
+
+          display: flex;
+          justify-content: center;
+        }
+
+        .hero__page {
+          width: 100%;
+
+          @include bp($point_2, min) {
+            position: relative;
+          }
+
+          .hero__top_border {
+            @include bp($point_2, min) {
+              position: absolute;
+              width: 65.5rem;
+              height: 3rem;
+              right: 0;
+              top: -3rem;
+              background: #ffffff1a;
+            }
+
+            @include bp($point_3) {
+              display: none;
+            }
+          }
+          .hero__left_border {
+            @include bp($point_2, min) {
+              position: absolute;
+              width: 3rem;
+              height: 77rem;
+              background: #ffffff1a;
+              left: -6rem;
+            }
+
+            @include bp($point_3) {
+              display: none;
+            }
+          }
+          .hero__right_border {
+            @include bp($point_2, min) {
+              position: absolute;
+              width: 3rem;
+              height: 77rem;
+              background: #ffffff1a;
+              right: -3rem;
+            }
+
+            @include bp($point_3) {
+              display: none;
+            }
+          }
+          .hero__img_w {
+            display: block;
+            object-fit: contain;
+            width: 59.5rem;
+            height: 74rem;
+
+            @include bp($point_3) {
+              width: 100%;
+              height: 36rem;
+              position: relative;
+            }
+
+            .hero__img {
+              @extend %contain_image;
+
+              @include bp($point_2, min) {
+                position: absolute;
+                top: 3rem;
+                right: 1.5rem;
+              }
+            }
+          }
+          .hero__decor {
+            position: absolute;
+            display: block;
+            object-fit: contain;
+            @include bp($point_2, min) {
+              top: -3rem;
+              left: 25rem;
+              width: 40rem;
+              height: 40rem;
+            }
+
+            @include bp($point_3) {
+                width: 20rem;
+                height: 20rem;
+                top: -3rem;
+                right: -3rem;
+            }
+
+            path {
+              stroke: #40464f;
+              &.color_1 {
+                animation: 10s color_1 infinite;
+              }
+              @keyframes color_1 {
+                0% {
+                  stroke: #ffff00;
+                }
+                25% {
+                  stroke: #ff00ff;
+                }
+                50% {
+                  stroke: #ff4500;
+                }
+                75% {
+                  stroke: #008000;
+                }
+                100% {
+                  stroke: #00ced1;
+                }
+              }
+              &.color_2 {
+                animation: 10s color_2 infinite;
+              }
+              @keyframes color_2 {
+                0% {
+                  stroke: #00ced1;
+                }
+                25% {
+                  stroke: #008000;
+                }
+                50% {
+                  stroke: #ff4500;
+                }
+                75% {
+                  stroke: #ff00ff;
+                }
+                100% {
+                  stroke: #ffff00;
+                }
+              }
+              &.color_3 {
+                animation: 10s color_3 infinite;
+              }
+              @keyframes color_3 {
+                0% {
+                  stroke: #faebd7;
+                }
+                25% {
+                  stroke: #da70d6;
+                }
+                50% {
+                  stroke: #00ced1;
+                }
+                75% {
+                  stroke: #00ff7f;
+                }
+                100% {
+                  stroke: #4682b4;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,137 @@
+.book {
+  background-image: url(../images/book__back.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 14rem 0;
+  
+  @include bp($point_2, min) {
+    background-attachment: fixed;
+  }
+  
+  .book__in {
+    
+    background-color: #292e36f2;
+   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 3.8rem;
+    
+    @include bp($point_2, min) {
+      padding: 14rem;
+      max-width: 92rem;
+    }
+    
+    @include bp($point_3) {
+    width: 100%;
+    padding: 3rem;
+    }
+    
+    
+    .book__row {
+      &.book__row.book__row--one {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        row-gap: 1rem;
+        color: $white-color;
+        
+        @include bp($point_3) {
+        text-align: center;
+        }
+        
+        .book__subtitle {
+          font-size: 1.5rem;
+          line-height: 2.2rem;
+          letter-spacing: 3px;
+          border-bottom: 1px solid $gold-color;
+          border-top: 1px solid $gold-color;
+          padding-top: 0.5rem;
+          text-transform: uppercase;
+        }
+        .book__title {
+          font-size: 4rem;
+          line-height: 5.6rem;
+        }
+      }
+      &.book__row.book__row--two {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .book__form {
+          display: flex;
+
+          row-gap: 3rem;
+
+          
+          @include bp($point_2, min) {
+            column-gap: 2.2rem;
+            flex-wrap: wrap;
+          }
+          
+          @include bp($point_3) {
+          flex-direction: column;
+          align-items: center;
+          }
+          
+          
+
+          .input_50 {
+           
+            height: 7rem;
+            line-height: 7rem;
+            border: 1px solid #858585;
+            background-color: transparent;
+            padding-left: 2.3rem;
+            font-size: 2.2rem;
+            line-height: 3.3rem;
+            color: $white-color;
+            
+            @include bp($point_2, min) {
+              width: calc(50% - 3rem / 2);
+            }
+            
+            @include bp($point_3) {
+            width: 100%;
+            }
+            
+            
+          }
+          .input_30 {
+            height: 7rem;
+            line-height: 7rem;
+            border: 1px solid #858585;
+            background-color: transparent;
+            padding-left: 2.3rem;
+            font-size: 2.2rem;
+            line-height: 3.3rem;
+            color: $white-color;
+            
+            @include bp($point_2, min) {
+              width: calc(33% - 3rem / 2);
+            }
+            
+            @include bp($point_3) {
+            width: 100%;
+            }
+            
+            
+          }
+          input::placeholder {
+            color: #fff;
+          }
+          .book__btn{
+            @extend%btn_size_6;
+            @extend%btn_color_1;
+            @extend%btn_font_size;
+            margin: 0 auto;
+          }
+        }
+      }
+    }
+  }
+}
